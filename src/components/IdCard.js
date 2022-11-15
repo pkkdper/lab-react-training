@@ -1,14 +1,30 @@
 function IdCard({ lastName, firstName, gender, height, birth, picture }) {
-console.log(birth)
+  console.log(birth);
 
   return (
-    <div>
-      <img src={picture} alt="pic"/>
-      <p>First Name: {firstName}</p>
-      <p>Last Name: {lastName}</p>
-      <p>gender: {gender}</p>
-      <p>height: {height}</p>
-      <p>birth: {birth.toDateString()}</p>
+      <div className="data">
+        <img src={picture} alt="pic" />
+        <div>
+          <p>
+            <b>First Name:</b> {firstName}
+          </p>
+          <p>
+            <b>Last Name: </b>
+            {lastName}
+          </p>
+          <p>
+            <b>Gender: </b>
+            {gender}
+          </p>
+          <p>
+            <b>Height: </b>
+            {height}
+          </p>
+          <p>
+            <b>Birth: </b>
+            {birth.toDateString()}
+          </p>
+        </div>
     </div>
   );
 }
